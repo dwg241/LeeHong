@@ -6,7 +6,7 @@ public class Hw1106Q1Triangle {
 	
 	
 	double Calculation(int b, int h) {
-		area= b*h/2;
+		area= (b*h)/2f;
 		return area;
 	}
 	
