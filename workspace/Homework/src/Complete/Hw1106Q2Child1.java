@@ -5,10 +5,7 @@ int ball;
 
 int Game(int k) {
 
-
 	ball += k;
-	
-	
 	return ball;
 	
 }

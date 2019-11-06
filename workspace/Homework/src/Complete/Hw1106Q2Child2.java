@@ -4,7 +4,6 @@ public class Hw1106Q2Child2 {
 	int ball;
 	int Game(int k) {
 		
-	
 		ball +=k*-1;
 		return ball;
 	}
