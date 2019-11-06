@@ -2,7 +2,7 @@ package Complete;
 
 import java.util.Scanner;
 
-public class Hw1106Q1 {
+public class Hw1106Q1Main {
 	
 
 	public static void main(String[] args) {

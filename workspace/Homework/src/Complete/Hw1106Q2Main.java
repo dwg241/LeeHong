@@ -2,7 +2,7 @@ package Complete;
 
 import java.util.Scanner;
 
-public class Hw1106Q2 {
+public class Hw1106Q2Main {
 	//다음조건을 만족하는 클래스를 구성하자. 구슬치기와 딱지치기
 	//어린아이가 소유하고 있는 구슬의 개수 정보를 담을 수 있다.
 	//놀이를 통한 구슬을 주고받음을 표현하는 메서드가 존재한다.
