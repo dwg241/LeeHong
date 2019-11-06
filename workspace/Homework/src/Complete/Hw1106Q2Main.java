@@ -34,7 +34,8 @@ public class Hw1106Q2Main {
 		
 		while(true) { 
 		int menu = kb.nextInt();
-	    if(menu==1){
+	   
+		if(menu==1){
 		count++;
 		
 		System.out.println("어린이1의 구슬을 획득했거나 혹은 잃은 구슬을 입력하세요!" );

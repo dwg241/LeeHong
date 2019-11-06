@@ -4,8 +4,7 @@ public class Hw1106Q2Child1 {
 int ball;
 
 int Game(int k) {
-	
-	
+
 
 	ball += k;
 	
