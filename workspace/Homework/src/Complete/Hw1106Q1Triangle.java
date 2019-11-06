@@ -1,6 +1,6 @@
-package homework;
+package Complete;
 
-public class Homework1106Q1Triangle {
+public class Hw1106Q1Triangle {
 
 	double area;
 	

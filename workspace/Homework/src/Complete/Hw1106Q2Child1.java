@@ -1,6 +1,6 @@
-package homework;
+package Complete;
 
-public class Homework1106Q2Child1 {
+public class Hw1106Q2Child1 {
 int ball;
 
 int Game(int b1, int k) {

@@ -1,13 +1,13 @@
-package homework;
+package Complete;
 
 import java.util.Scanner;
 
-public class Homework1106Q1 {
+public class Hw1106Q1 {
 	
 
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
-		Homework1106Q1Triangle triangle = new Homework1106Q1Triangle();
+		Hw1106Q1Triangle triangle = new Hw1106Q1Triangle();
 		System.out.println("밑변과 넓이를 입력하고 싶으면 1을 누르세요!");
 		
 		while(true) {

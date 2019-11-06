@@ -1,7 +1,7 @@
-package homework;
+package Complete;
 import java.util.Scanner;
 
-public class Homework1105 {
+public class Hw1105 {
 	public static void main(String[] args) {
 	//	(25x5)+(36-4)}-72}/5 
 		  System.out.println("문제1");

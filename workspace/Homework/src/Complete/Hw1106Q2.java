@@ -1,8 +1,8 @@
-package homework;
+package Complete;
 
 import java.util.Scanner;
 
-public class Homework1106Q2 {
+public class Hw1106Q2 {
 	//다음조건을 만족하는 클래스를 구성하자. 구슬치기와 딱지치기
 	//어린아이가 소유하고 있는 구슬의 개수 정보를 담을 수 있다.
 	//놀이를 통한 구슬을 주고받음을 표현하는 메서드가 존재한다.
@@ -18,8 +18,8 @@ public class Homework1106Q2 {
 		// TODO Auto-generated method stub
 		Scanner kb = new Scanner(System.in);
 		int count = 0;
-		Homework1106Q2Child1 child1 = new Homework1106Q2Child1();
-		Homework1106Q2Child2 child2 = new Homework1106Q2Child2();
+		Hw1106Q2Child1 child1 = new Hw1106Q2Child1();
+		Hw1106Q2Child2 child2 = new Hw1106Q2Child2();
 				
 		System.out.println("어린이1의 구슬개수를 입력하세요 " );
 		int child1ball = kb.nextInt();
