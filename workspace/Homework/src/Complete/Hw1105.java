@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Hw1105 {
 	public static void main(String[] args) {
 	//	(25x5)+(36-4)}-72}/5 
+		 Scanner kb = new Scanner(System.in);
 		  System.out.println("문제1");
 		  System.out.println((25*5 +36-24-72)/5);
 		  
@@ -108,7 +109,7 @@ public class Hw1105 {
 		  	 }
 		  	System.out.println("");
 		  	System.out.println("문제7");
-		  	
+		    System.out.println("범위를 지정하세요!");
 		  	//자연수 1부터 시작해서 모든 홀수와 3의 배수인 짝수를 더해 나간다.
 		  //	그리고 그 합이 언제 (몇을 더했을 때) 1000이 넘어서는지,
 		  ///	그리고 1000이 넘어선 값은 얼마가 되는지 계산하여 출력하는
@@ -118,9 +119,11 @@ public class Hw1105 {
 		  	int hole=0;
 		  	int three=0;
 		    int order1=0;
-		    
-		  	while(true) 
+		   
+		    int range= kb.nextInt();;
+		    while(true) 
 		  	{ 
+		    	
 		  		hole++;
 		  		three=3*hole;
 		  		if( hole%2 != 0 || three%2== 0)
@@ -128,17 +131,17 @@ public class Hw1105 {
 		  			sum2= hole+three+sum2;
 		  			
 		  		}
-		  		if(sum2>1000) {
+		  		if(sum2>range) {
 		  		  if(hole%2 !=0){
 		  			order1= (hole+1)/2;
-		  			 System.out.println("최초의 1000이 넘는값은 "+sum2);
+		  			 System.out.println("최초의 "+range+ "이 넘는값은 "+sum2);
 		  			System.out.println("이때 마지막으로 더한 값은 홀수이고 "+order1+"번째 " +hole+"값이다.");  
 		  		  break;
 		  		  }
 		  			
 		  		  else
 		  		  order1= three/6;
-		  		 System.out.println("최초의 1000이 넘는값은 "+sum2);
+		  		 System.out.println("최초의 "+range+ "이 넘는값은 "+sum2);
 		  		  System.out.println("이때 마지막으로 더한 값은 3의 배수이고 "+order1+"번째 " +three+"값이다.");
 		  			
 		  			break;
@@ -177,7 +180,7 @@ public class Hw1105 {
 		   int primeNumber= (int)(Math.random()*99)+1;
 
               discriminate(primeNumber);
-              Scanner kb = new Scanner(System.in);
+             
               System.out.println("찾고 싶은 소수 범위를 입력하세요!"); 
               int number= kb.nextInt();;
              

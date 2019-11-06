@@ -23,21 +23,21 @@ public class Hw1106Q2 {
 				
 		System.out.println("어린이1의 구슬개수를 입력하세요 " );
 		int child1ball = kb.nextInt();
-		
-		System.out.println("어린이2의 구슬개수를 입력하세요 " );
+			System.out.println("어린이2의 구슬개수를 입력하세요 " );
 		int child2ball = kb.nextInt();	
+	
 		System.out.println("게임을 실행하려면 1을 입력하세요! " );
 		System.out.println("게임을 종료하려면 2를 입력하세요! " );
 		
 		while(true) { 
-			int menu = kb.nextInt();
-	   if(menu==1){
+		int menu = kb.nextInt();
+	    if(menu==1){
 		count++;
 		
 		System.out.println("어린이 1의 구슬을 획득했거나 혹은 잃은 구슬을 입력하세요!" );
 		System.out.println("참고: 구슬을 잃었으면 -를 붙여주세요!" );
-		
 		int key = kb.nextInt();
+		
 		System.out.println(count+"차 게임 실행결과" );
 		child1.Game(child1ball,key);
 		child1.GameShow();
@@ -53,7 +53,7 @@ public class Hw1106Q2 {
 			System.out.println("다시 입력하세요!" );
 		
 		}			
-	}
+	    }
 	
 		}
 

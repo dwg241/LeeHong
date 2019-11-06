@@ -21,8 +21,12 @@ public class Hw1106Q1 {
 				triangle.Calculation(bottom, high);
 				triangle.CalculationShow();
 			}
+			else if(menu==2)
+			{
+				break;
+			}
 			else
-				System.out.println("다시입력하세요!");
+				System.out.println("다시 입력하세요!");
 		}
 	
 	}
