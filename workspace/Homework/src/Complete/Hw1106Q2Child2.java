@@ -2,10 +2,10 @@ package Complete;
 
 public class Hw1106Q2Child2 {
 	int ball;
-	int Game(int b2, int k) {
+	int Game(int k) {
 		
-		ball = b2;
-		ball = b2 +k*-1;
+	
+		ball +=k*-1;
 		return ball;
 	}
 

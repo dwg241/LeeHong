@@ -3,11 +3,15 @@ package Complete;
 public class Hw1106Q2Child1 {
 int ball;
 
-int Game(int b1, int k) {
+int Game(int k) {
 	
-	ball = b1;
-	ball = b1 +k;
+	
+
+	ball += k;
+	
+	
 	return ball;
+	
 }
 
 void GameShow() {
