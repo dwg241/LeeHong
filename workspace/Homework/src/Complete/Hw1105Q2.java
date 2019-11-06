@@ -8,9 +8,11 @@ public class Hw1105Q2 {
 		 Scanner kb = new Scanner(System.in);
 		 System.out.println("문제3");
 	      int radius = (int)(Math.random()*10)+1;
-	  	
-	       circleRound(radius); //void 타입
-	       circleAreaCalculation(radius); 
+	      
+	      System.out.println("임의의 반지름은 " +radius+"입니다.");
+	       
+	      circleRound(radius); //void 타입
+	      circleAreaCalculation(radius); 
 	      
 	       float circleArea=circleAreaCalculation(radius);  //return 타입으로 보기
 	       System.out.println("원의 넓이값: "+circleArea);
@@ -24,13 +26,51 @@ public class Hw1105Q2 {
 		   System.out.println("문제4");
 		   int primeNumber= (int)(Math.random()*99)+1;
 
-           discriminate(primeNumber);
+           discriminate(primeNumber); //임의 랜덤 소수 판별
              
            System.out.println("찾고 싶은 소수 범위를 입력하세요!"); 
            int number= kb.nextInt();;
              
               output(number);
 }
+	
+	private static void discriminate(int p) {
+		// TODO Auto-generated method stub
+		int key =0;
+		for(int i=1; i<=p;i++) {
+             if(p%i==0) {
+            	key++;
+            	
+             }
+		}
+		
+		if(key==2) {
+			System.out.println("임의의 " +p+"값은 소수입니다.");
+		}
+             else
+             System.out.println("임의의 " +p+"값은 소수가 아닙니다.");
+		}
+
+	
+	private static void circleRound(int r) {
+		// TODO Auto-generated method stub
+		float pi = 3.14f;
+		float  result =r*2*pi;
+          
+        System.out.println("원의 둘레값: "+result);
+	}
+
+	private static float circleAreaCalculation(int r) {
+		// TODO Auto-generated method stub
+		float pi = 3.14f;
+		float  result =r*r*pi;
+          return result;
+          
+	}
+
+
+
+
 	
 	private static void output(int n) {
 		// TODO Auto-generated method stub
@@ -51,65 +91,5 @@ public class Hw1105Q2 {
 		     }
 		System.out.print("입니다.");
 	}
-
-	private static void discriminate(int p) {
-		// TODO Auto-generated method stub
-		int key =0;
-		for(int i=1; i<=p;i++) {
-             if(p%i==0) {
-            	key++;
-            	
-             }
-		}
-		
-		if(key==2) {
-			System.out.println(p+"값은 소수입니다.");
-		}
-             else
-            	 System.out.println(p+"값은 소수가 아닙니다.");
-		}
-	
-
-	
-	
-	private static void circleRound(int r) {
-		// TODO Auto-generated method stub
-		float pi = 3.14f;
-		float  result =r*2*pi;
-          
-          System.out.println("원의 둘레값: "+result);
-	}
-
-	private static float circleAreaCalculation(int r) {
-		// TODO Auto-generated method stub
-		float pi = 3.14f;
-		float  result =r*r*pi;
-          return result;
-          
-	}
-
-	private static void divide(int ran1, int ran2) {
-		// TODO Auto-generated method stub
-		int  result1;
-		int  result2;
-		if(ran1>ran2)
-		{
-		  result1=ran1/ran2;
-		  result2= ran1%ran2;
-		  System.out.println("몫: "+result1 + " 나머지: "+result2); 
-		}
-		else
-		  result1=ran2/ran1;
-		  result2= ran2%ran1;
-		  System.out.println("몫: "+result1 + " 나머지: "+result2);
-        
-	}
-
-	private static void add(int ran1, int ran2) {
-             int  result =ran1+ran2;
-             
-             System.out.println("덧셈값: "+result);
-	
-	}	
 	}
 

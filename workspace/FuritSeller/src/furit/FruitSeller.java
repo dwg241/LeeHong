@@ -20,6 +20,13 @@ public class FruitSeller {
     	APPLE_PRICE=price;
     }
     
+    public FruitSeller(FruitSeller fs){
+
+    	this.numofApple =fs.numofApple;
+    	this.myMoney=fs.myMoney;
+    	this.APPLE_PRICE=fs.APPLE_PRICE;
+    }
+    
     int saleApple(int money)
     {
     	//판매할 사과의 개수 

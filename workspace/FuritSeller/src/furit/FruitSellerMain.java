@@ -9,8 +9,8 @@ public class FruitSellerMain {
 		seller1 = new FruitSeller();
 	    //셀러2 생성
 	    FruitSeller seller2; // 참조변수 생성 :인스턴스의 주소를 저장
-	    seller2 = new FruitSeller(0,10,1000);
-	    
+	   // seller2 = new FruitSeller(0,10,1000);
+	    seller2 = new FruitSeller(seller1);
 		//바이어 생성 
 	    FruitBuyer buyer = new FruitBuyer(10000);
 	
