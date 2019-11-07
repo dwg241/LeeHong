@@ -34,6 +34,6 @@ public class Hw1106Q3 {
 		
 		
 		System.out.print(str2.substring(0,6));
-		System.out.print(str2.substring(7,14));   // 13이 아니고 14인지가 궁금합니다. 숫자를 0부터 쓰는데 모르겠습니다.
+		System.out.print(str2.substring(7,14));  
 	}
 }
