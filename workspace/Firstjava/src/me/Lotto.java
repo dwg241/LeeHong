@@ -1,3 +1,4 @@
+package me;
 
 public class Lotto {
 	static int number [] = new int [7];

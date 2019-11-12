@@ -1,3 +1,4 @@
+package me;
 
 public class HelpFile {
 	static float  result;
