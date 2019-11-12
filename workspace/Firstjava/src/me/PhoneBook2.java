@@ -9,10 +9,10 @@ public static void main(String[] args) {
 		Data2 [] data =new Data2 ();
 		Scanner kb = new Scanner(System.in);
 		String str ="가정현나정현다정현"
-				+ "라정현마정현바정현"
-				+ "사정현아정현자정현"
-				+ "차정현카정현타정현"
-				+ "파정현하정현";
+				  + "라정현마정현바정현"
+				  + "사정현아정현자정현"
+				  + "차정현카정현타정현"
+				  + "파정현하정현";
 		for(int i=0; i<14;++i)
 		 {
 			data[i]= new Data();
