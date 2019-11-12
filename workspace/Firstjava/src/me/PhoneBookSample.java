@@ -105,7 +105,6 @@ public class PhoneBookSample {
 							
 							if (choice == 1) {
 						
-							
 								 
 									    data[i].name=null; 
 										data[i].number=null; 
