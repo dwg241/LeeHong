@@ -1,5 +1,8 @@
 package Complete;
 
+
+
+
 public class InstanceOf {
 	public static void wrapBox(Box box) {
 		

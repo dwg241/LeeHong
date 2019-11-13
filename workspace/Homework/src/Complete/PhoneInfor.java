@@ -2,9 +2,9 @@ package Complete;
 
 class PhoneInfor {
 
-	private String name;     // 직접 참조하는 경우는 없다 그래서 직접참조 못하게 Private 를 쓴다.
-	private String phoneNumber;
-	private String birthday;
+	public String name;     // 직접 참조하는 경우는 없다 그래서 직접참조 못하게 Private 를 쓴다.
+	public String phoneNumber;
+	public String birthday;
 	
 	//데이터 초기화
 	//public을 써야 다른 패키지에서도 불러올 수 있다. 
