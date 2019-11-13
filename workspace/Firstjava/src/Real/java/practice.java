@@ -1,32 +1,49 @@
 package Real.java;
 
 
-// ��� �ڵ��  class {} �ȿ��� �ۼ��ȴ�.
-//-����: �������=field: static, non static 2���� �ִ�. -class �ȿ������ �Լ�, �Լ��ȿ� ��������- void main�ȿ�
-// field: static, non static 2���� �ִ�.
-// static �� ������ ����
-// -method: static, non static(������ �� �ִ�.)
-// mew �ν��Ͻ��� �������� �ʾƵ� ����� �����ϴ�. 
-public class practice {
+public class Practice {
 
-	private static int number;
 	
-	public static void main(String[] args) //�̹� ���������� ���θ޼��� �ȿ��� ���Ǵ� �Լ����� ���δ�  static���� �������Ѵ�. 
-	{
-		
-		//�Լ�: ����(); ���� {} ȣ��(��);
-		//practice.main(args); // ��ġ, ���
-		int value =200; // �ٸ��Լ������� ����Ҽ� ����. 
-		number =100;
-		printLine(value); //�Լ��� ȣ���� �ڴ�. {������}{Ư����}{��ȯ��} {�Լ���}({�Ű����� ���}) "{}" ���̸� �����ҳ��� "() " �̰Ŵ� �׳ɼ��� void�� ���� 
-        // static �޼���� static ������ �޼��常 ��밡���ϴ� 
-		//���������� �ٸ��Լ����� �ַ��� ������ �־���Ѵ�. 
+	public static void main(String[] args) {
+		Wrap w =new Wrap();
+		Practice p1=new Simplebox();
+		Practice p2=new PaperBox();
+		Practice p3=new GoldPaperBox();
+	
+		w.wrapbox(p1);
+		w.wrapbox(p2);
+		w.wrapbox(p3);
 	}
-	public static void printLine(int value)
-	{
-		
-		System.out.println("--------"+number+"+"+value+"----------");
-		return;// void�϶��� return; ���� ���Լ��� ����ȴ�. �ؿ��� ��Լ��� �ϵ� �ٱ����� ������.  
-		
+}
+
+class PaperBox extends Practice{
+
+	@Override
+	public String toString() {
+		return "PaperBox";
+	}
+	
+}
+
+class GoldPaperBox extends Practice{
+
+	@Override
+	public String toString() {
+		return "GoldPaperBox";
+	}
+	
+}
+
+class Simplebox extends Practice{
+
+	@Override
+	public String toString() {
+		return "Simplebox";
+	}
+	
+}
+class Wrap{
+	void wrapbox(Practice p) {
+		System.out.println(p);
 	}
 }
