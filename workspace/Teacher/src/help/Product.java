@@ -1,4 +1,4 @@
-package com.park.tc;
+package help;
 
 public class Product {
 

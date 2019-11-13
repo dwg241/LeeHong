@@ -1,4 +1,4 @@
-package Complete;
+package phone;
 
 import java.util.Scanner;
 
