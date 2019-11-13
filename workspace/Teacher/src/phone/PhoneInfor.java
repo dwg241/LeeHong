@@ -5,8 +5,7 @@ class PhoneInfor {
 	public String name;     // 직접 참조하는 경우는 없다 그래서 직접참조 못하게 Private 를 쓴다.
 	public String phoneNumber;
 	public String birthday;
-	public String major;
-	public String university;
+	
 	//데이터 초기화
 	//public을 써야 다른 패키지에서도 불러올 수 있다. 
 	public PhoneInfor(String name,String phoneNumber, String birthday){
@@ -51,7 +50,9 @@ class PhoneUnivInfor extends PhoneInfor{
 	public void showInfo()
 	{
 	super.showInfo();
+	System.out.println("대학교 : "+ university);
 	System.out.println("전공 : "+major);
+	
 	}
 	
 	}
@@ -68,7 +69,8 @@ class PhoneJobInfor extends PhoneInfor{
 	public void showInfo()
 	{
 	super.showInfo();
-	System.out.println("전공 : "+major);
+	System.out.println("직장 : "+ job);
+	System.out.println("직장연락처 : "+jobnumber);
 	}
 	
 	}
