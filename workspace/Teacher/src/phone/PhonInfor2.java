@@ -1,6 +1,6 @@
 package phone;
 
-class PhoneInfor {
+public class PhonInfor2 {
 
 	public String name;     // 직접 참조하는 경우는 없다 그래서 직접참조 못하게 Private 를 쓴다.
 	public String phoneNumber;
@@ -8,7 +8,7 @@ class PhoneInfor {
 	
 	//데이터 초기화
 	//public을 써야 다른 패키지에서도 불러올 수 있다. 
-	public PhoneInfor(String name,String phoneNumber, String birthday){
+	public PhoneInfor2(String name,String phoneNumber, String birthday){
 
 	this.name=name;
 	this.phoneNumber=phoneNumber;
@@ -18,7 +18,7 @@ class PhoneInfor {
 	
 	//오보로딩 다른생성자 호출, 데이터 초기화는 또다른 형태 
 	
-	public PhoneInfor(String name,String phoneNumber){
+	public PhoneInfor2(String name,String phoneNumber){
 
 	this(name,phoneNumber,null);
 		
@@ -37,10 +37,10 @@ class PhoneInfor {
 		}
 	}
 }
-class PhoneUnivInfor extends PhoneInfor{
+class PhoneUnivInfor2 extends PhoneInfor{
 	String major; // 전공학과
 	String university;
-	public PhoneUnivInfor(String name, String pNum, String bDay, String uni, String maj) {
+	public PhoneUnivInfor2(String name, String pNum, String bDay, String uni, String maj) {
 		super(name, pNum, bDay);
 		this.major=maj;// TODO Auto-generated constructor stub
 		this.university =uni;
@@ -58,10 +58,10 @@ class PhoneUnivInfor extends PhoneInfor{
 	
 	}
 
-class PhoneJobInfor extends PhoneInfor{
+class PhoneJobInfor2 extends PhoneInfor{
 	String job; // 전공학과
 	String jobnumber;
-	public PhoneJobInfor(String name, String pNum, String bDay, String job, String jobNum) {
+	public PhoneJobInfor2(String name, String pNum, String bDay, String job, String jobNum) {
 		super(name, pNum, bDay);
 		this.job=job;
 		this.jobnumber =jobNum;
@@ -75,8 +75,4 @@ class PhoneJobInfor extends PhoneInfor{
 	System.out.println("직장연락처 : "+jobnumber);
 	System.out.println("-----------------------");
 	}
-	
-	}
-
-
-
+}

@@ -71,7 +71,7 @@ public class PhoneBookMain4 {
 		   pBook[cnt] =pi;
 			
 		    System.out.println("추가로 입력하시고 싶으면 다음 버튼을 누르세요!" );
-			System.out.println("없음[0] 대학교[1] 직장[2] " );
+			System.out.println("[0]없음 [1]대학교 [2]직장 " );
 			int choice =kb.nextInt();
 			kb.nextLine();
 			if(choice==0){
@@ -100,6 +100,7 @@ public class PhoneBookMain4 {
 			
 	        System.out.println("정상적으로 입력되었습니다." );
 	        System.out.println("저장된 정보의 개수는: " + cnt );
+	        System.out.println("-----------------------");
 		}
 		
 		public static int searchIndex(String name) {
