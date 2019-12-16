@@ -34,7 +34,7 @@ public class PhoneInfor2 {
 		this.university=uni;
 		this.major= major;
 		}
-	public PhoneInfor2(String name,String phoneNumber, String birthday, String job, String jobNum){
+	public void PhoneInfor2(String name,String phoneNumber, String birthday, String job, String jobNum){
 
 		this.name=name;
 		this.phoneNumber=phoneNumber;

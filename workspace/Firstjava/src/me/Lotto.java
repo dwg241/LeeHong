@@ -25,6 +25,8 @@ public class Lotto {
 			i--;	
 			}
 		}
+		
+		
 		System.out.print("로또 번호는 ");
 		for(int i=0;i<6;++i)
 		{ if(i==0)
