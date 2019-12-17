@@ -4,65 +4,48 @@ public class Dealer  {
 	
 	int DCard [] = new int [15];
 	int Dcount;
-	int DSum=0;
-	int DSum2=0;
+	int DSum;
+	int DSum2;
 	int result =0;
-	int special=13;
-	String Picture[] = {"공백","♣A","♣2","♣3","♣4","♣5","♣6","♣7","♣8","♣9","♣10"
-                             ,"♣J","♣Q","♣K"
-                             ,"♠A","♠2","♠3","♠4","♠5","♠6","♠7","♠8","♠9","♠10"
-                             ,"♠J","♠Q","♠K"
-                             ,"♥A","♥2","♥3","♥4","♥5","♥6","♥7","♥8","♥9","♥10"
-                             ,"♥J","♥Q","♥K"
-                             ,"◆A","◆2","◆3","◆4","◆5","◆6","◆7","◆8","◆9","◆10"
-			                 ,"◆J","◆Q","◆K"};
-	
-	int numeber [] = {0,1,2,3,4,5,6,7,8,9,10,10,10,10,
-                        1,2,3,4,5,6,7,8,9,10,10,10,10,
-                        1,2,3,4,5,6,7,8,9,10,10,10,10,
-                        1,2,3,4,5,6,7,8,9,10,10,10,10};
+	int times=2;
   
 
 
 
-	void dealergame(int Sum,Player pi, int count) {
-		// TODO Auto-generated method stub
-		Dcount=count+2;
-		
-		for(int i=0 ;i<count;i++) {
-			 {
-			DCard [i]= pi.Card[i];
-			}
-		}
-		 for(int i=count ;i<count+2;i++) {
-			 DCard[i] =(int)(Math.random()*52+1);
-			 for(int j=0 ;j<count;j++) {
-			 if(DCard[i]==DCard[j])
-    		{
-    			i--;
-    			
-    		}
-			 }
-    	 }
+	void dealergame(int Sum, int count, Card ai) {
 		
 		
-		this.DSum= numeber [DCard[count]]+numeber [DCard[count+1]];
-		
-		if(numeber [DCard[count+1]]==1 || numeber [DCard[count]] ==1)
-		{
-	    this.DSum2= numeber [DCard[count]]+numeber [DCard[count+1]]+10;
-		}
+		 Dcount=count;
+		 DCard[0]=ai.GiveCard(Dcount);
+         Dcount++;
+         DCard[1]=ai.GiveCard(Dcount);
+         Dcount++;
+   
 		
 		while(true)	{	
-		        
-			if(this.DSum2>Sum && this.DSum2<22) {
+			DSum=0;
+			DSum2=0;
+	
+			for(int i=0 ;i<times;i++)
+			{
+				if(DCard[i]==1 && Sum+11<22)
+				{
+					this.DSum2=Sum +DCard[i]+10;
 				
-
+				}
+				if(DSum2>0)
+				{
+					this.DSum2=DSum2+DCard[i];
+				}
+				
+				this.DSum=DSum + DCard[i];
+				
+			}	
+			
+			if(this.DSum2>Sum && this.DSum2<22) {
 					this.result=1;
 					break;
-				
 			}
-	
 	
 		
 			if(this.DSum>21) {
@@ -78,47 +61,16 @@ public class Dealer  {
 				
 			}
 			
-		
-		DCard [Dcount]= (int)(Math.random()*52+1);
-		 
-		for(int i=0 ;i<Dcount;i++) {
-	    		
-    		 if(DCard[i]==DCard[Dcount])
-    		{
-    			i=-1;
-    			DCard[Dcount] =(int)(Math.random()*52+1);
-    		}
-    	 
-    	 }
-		
-		
-		Dcount=Dcount+1;
-         
-		
-		
-		for(int i=Dcount-1; i<Dcount ;i++) {
-			this.DSum= DSum + numeber [DCard[i]];	
-			}
-		if(numeber [DCard[Dcount-1]]==1 && this.DSum<11) {
-			this.DSum2= this.DSum+10; 	
-		}
-		 
-		
-		if(this.DSum2>0 && this.DSum2<22)
-		{
-			for(int i=Dcount-1; i<Dcount ;i++) {
-				this.DSum2= DSum2 + numeber [DCard[i]];	
-				}
-		}
-		}
-		
+			 DCard[times]=ai.GiveCard(Dcount);
+	         Dcount++;
+			 times++;
+			
 	}
-	
+	}
 		
-
-	
-    void show(int count)
+    void show()
     {
+    	System.out.println("");
     	if(this.DSum2<22 && this.DSum2>this.DSum)
 		{
         System.out.println("딜러의 카드합: "+ this.DSum2);
@@ -128,12 +80,7 @@ public class Dealer  {
     	System.out.println("딜러의 카드합: "+ this.DSum);
     
     	}
-
-    	
-    	for(int i=count; i<Dcount ;i++) {
-      	  System.out.print(Picture[DCard[i]] +" ");
-  		}
-    	
+    	System.out.println("===========================");	
     }
     
 	
