@@ -1,21 +1,17 @@
 package game;
 
-import java.util.ArrayList;
-
 import java.util.Scanner;
 
-
-
-
+//기능 클래스
 public class RuleManager {
 
-	
-
-	ArrayList<Player> pBook;
-
-      Scanner kb;
+	Player[] pBook ;
 	
 	
+	int cnt;
+	
+	Scanner sc;
+	String name;
 	public static RuleManager getInstance() {
 		if(m==null) {
 			return new RuleManager();
@@ -28,29 +24,79 @@ public class RuleManager {
 	private static RuleManager m = new RuleManager();
 	
 	private RuleManager() {
-		
-		pBook= new ArrayList<Player>();
-
-		kb = new Scanner(System.in);
+	    pBook = new Player[5];
+		sc = new Scanner(System.in);
 	}
-	static Player pi = null;
 	
-	static void Betting()
-	{
-		System.out.println("베팅 금액을 입력하세요!");
-		int money = kb.nextInt();
-		pi = new Player(money);
-		System.out.println(money+"원을 걸었습니다.");
+
+	 void moneyset() {
+     
+        Player wallet=null;
+		wallet = new Player();
+		System.out.println("게임을 하기위해 먼저 사용하실 아이디를 입력해주세요!");	
+	    name=sc.nextLine();
+		System.out.println("초기 금액은 100원에서 시작합니다.");
+		int money = 100;
+		wallet.insertmoney(money);
+	    pBook[1]=wallet;
+		
 	}
-	static void Hit(int select2) {
-		int card=(int)(Math.random()/10);
-		System.out.println(card+"을 받았습니다.");
-		Player.CardSum(card);
-		System.out.println("더 받겠습니까?");
+	
+	
+	
+	void machine(int select) {
+	 
+		Horeses h= new Horeses();
+	     
+		
+		
+		System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
+		for(int i=1 ; i<7;i++) {
+		System.out.print(i+"번 레인|");
+        System.out.println("馬");
+		}
+         System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
+		while(true) {
+			System.out.println("");
+		    System.out.println("베팅금액을 입력해주세요!");
+			int Bmoney = sc.nextInt();
+			if(Bmoney!=0) {
+			System.out.println("몇번 말에 거시겠습니까!");
+			System.out.println("[1] [2] [3] [4] [5] [6]");
+			int hores = sc.nextInt();
+			h.insertmoney(hores, Bmoney);
+			}
+			h.Start();
+			h.Moneychart();
+			if(h.goal==1) {
+				for(int i=1 ; i<7 ;i++) 
+				{
+			    pBook[1].money=pBook[1].money+h.HoresMoney[i]; 
+				}
+				System.out.println(name +"님의 잔액: " +pBook[1].money);
+				break;
+			
+			}
+			
+			}
+	
+	
 	}
-	static void Stop(int select2) {
-		Dealer.DealerGame();
-	    
-  	                                  
-	}
+
+
+	
 }
+
+	
+		
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	

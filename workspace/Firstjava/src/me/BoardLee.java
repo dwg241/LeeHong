@@ -22,7 +22,7 @@ public class BoardLee {
 		//for(int i=0;i<20;++i) {
 		//	if(s[i]!=null) {
 				
-			
+		
 		System.out.println("       "+s[0]);
 	//	break;
 		//
