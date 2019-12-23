@@ -13,11 +13,11 @@ public class Team {
 		int num5= ran-num3-num4;
 	
 		int a;
-	int b;
-	int c;
-	int x = 0 ;
-	int y =0 ;
-	int z =0;
+	    int b;
+	    int c;
+	    int x = 0 ;
+	    int y =0 ;
+	    int z =0;
 	
 	
 for(a=1;a<10;a++ ) {

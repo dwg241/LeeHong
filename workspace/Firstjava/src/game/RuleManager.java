@@ -47,7 +47,7 @@ public class RuleManager {
 	void machine(int select) {
 	 
 		Horeses h= new Horeses();
-	     
+	    int times=0;
 		
 		
 		System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
@@ -57,6 +57,7 @@ public class RuleManager {
 		}
          System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
 		while(true) {
+			times++;
 			System.out.println("");
 		    System.out.println("베팅금액을 입력해주세요!");
 			int Bmoney = sc.nextInt();
@@ -64,14 +65,16 @@ public class RuleManager {
 			System.out.println("몇번 말에 거시겠습니까!");
 			System.out.println("[1] [2] [3] [4] [5] [6]");
 			int hores = sc.nextInt();
-			h.insertmoney(hores, Bmoney);
+			h.insertmoney(hores, Bmoney, times);
 			}
-			h.Start();
-			h.Moneychart();
+			h.Start(times);
+			h.PeopleMoney(times);
+			h.Moneychart(times);
+			
 			if(h.goal==1) {
 				for(int i=1 ; i<7 ;i++) 
 				{
-			    pBook[1].money=pBook[1].money+h.HoresMoney[i]; 
+			    pBook[1].money=pBook[1].money+h.HoresMoney[i][0]; 
 				}
 				System.out.println(name +"님의 잔액: " +pBook[1].money);
 				break;

@@ -3,38 +3,23 @@ package me;
 
 public class Data {
 	public static void main(String[] args) {   
-		int Card[] = new int [15];
-		int Sum = 0;
-		int Sum2 = 0;
-		Card[2]=1;
-		Card[1]=3;
-		int count =3;
-		for(int i=1 ;i<3;i++)
-		{
-			if(Card[i]==1 && Sum+11<22)
-			{
-			Sum2=Sum+Card[i]+10;
-			
-			if(Card[1]==1 && count==3) {
-			
-		    Sum2=Sum2 -1;
-			
-			}
-			}
-			
-			if(Sum2>0 && Card[i]!=1)
-			{
-			
-			Sum2=Sum2+Card[i];
-			
-			}
-			
-			
-			Sum=Sum+Card[i];
-			}
-		System.out.println(Sum2);
-		System.out.println(Sum);
-		
+	  
+		int [][] HoresMoney = new int [7][7];
+		HoresMoney[1][3]=;
+		System.out.println(HoresMoney[5][5]);
+		for(int i=1; i<6; i++)
+    	{        	  
+    	if(i==1) HoresMoney[1][i]=HoresMoney[1][i]*4;
+    	if(i==2) HoresMoney[1][i]=HoresMoney[1][i]*2;
+    	if(i==3) HoresMoney[1][i]=(int)(HoresMoney[1][i]*1.5);
+    	if(i==4) HoresMoney[1][i]=(int)(HoresMoney[1][i]*1.25);
+    	if(i==5) HoresMoney[1][i]=(int)(HoresMoney[1][i]*1.1);
+    	}
+    	for(int i=1; i<6; i++) 
+    	{
+        HoresMoney[1][0]=HoresMoney[1][0]+HoresMoney[1][i];	
+    	}
+        System.out.println(HoresMoney[1][0]);
 }
 }
 
