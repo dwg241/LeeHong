@@ -61,7 +61,6 @@ public class Horeses {
 	}
 	
 	
-	
 	void Start(int Round, int w, int b) {
 		Bonus[w]=10;
         Bonus[b]=0.9;
