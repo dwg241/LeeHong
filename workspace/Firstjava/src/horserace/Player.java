@@ -1,4 +1,4 @@
-package HoresRace;
+package horserace;
 
 
 

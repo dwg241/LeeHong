@@ -1,9 +1,9 @@
-package BlackJack;
+package blackjack;
 
 import java.util.Scanner;
 
 //기능 클래스
-public class GameMenu {
+public class BlackManager {
 
 	Player[] pBook ;
 	
@@ -12,29 +12,30 @@ public class GameMenu {
 	
 	Scanner sc;
 	String name;
-	public static GameMenu getInstance() {
+	public static BlackManager getInstance() {
 		if(m==null) {
-			return new GameMenu();
+			return new BlackManager();
 		} else {
 			return m;
 		}
 		
 	}
 	
-	private static GameMenu m = new GameMenu();
+	private static BlackManager m = new BlackManager();
 	
-	private GameMenu() {
+	private BlackManager() {
 	    pBook = new Player[5];
 		sc = new Scanner(System.in);
 	}
 	
 
-	 void moneyset() {
+	void moneyset() {
         
         Player wallet=null;
 		wallet = new Player();
 		System.out.println("게임을 하기위해 먼저 사용하실 아이디를 입력해주세요!");	
-	    name=sc.nextLine();
+	    System.out.println("아이디");
+		name=sc.nextLine();
 		System.out.println("초기 금액은 100원에서 시작합니다.");
 		int money = 100;
 		wallet.insertmoney(money);

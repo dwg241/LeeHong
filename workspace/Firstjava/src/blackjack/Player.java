@@ -1,4 +1,4 @@
-package BlackJack2;
+package blackjack;
 
 
 
