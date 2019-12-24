@@ -1,7 +1,7 @@
 package GAME;
 
 class ID {
-int money;
+double money;
 String name;
 	
 	public ID(String name, int money) {

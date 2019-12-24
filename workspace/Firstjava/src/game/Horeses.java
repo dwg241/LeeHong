@@ -2,14 +2,16 @@ package GAME;
 
 public class Horeses {
 
-	int [][] HoresMoney = new int [7][7];
+	double [][] HoresMoney = new double [7][7];
 	int[] Hores = new int [7];
 	int [] PHoresMoney=new int [7];
+	double [] Bonus = {1,1,1,1,1,1,1};
 	int goal=0;
 	int arrive=0;
 	int max=0;
 	int maxi=0;
 	double rank[] = new double [7];
+	
 	
 	void insertmoney(int horse , int Bmoney, int Round)
 	{
@@ -60,10 +62,16 @@ public class Horeses {
 	
 	
 	
-	void Start(int Round) {
-	    for(int i=1 ; i<7;i++) {
+	void Start(int Round, int w, int b) {
+		Bonus[w]=10;
+        Bonus[b]=0.9;
+		
+		for(int i=1 ; i<7;i++) {
 		 
 		Hores[i] =Hores[i] +(int)(Math.random()*6+1);
+		
+		if(i==w) Hores[i]=Hores[i]-1;
+		if(i==b) Hores[i]=Hores[i]+1;
 		
 		if(Hores[i]>=20)  {
 
@@ -105,7 +113,8 @@ public class Horeses {
 	}
     
 	void MoneyCount() {
-    
+            
+    		
             for(int k=1 ; k<7 ; k++){
         	if(Hores[k]==20)
         	{
@@ -114,15 +123,16 @@ public class Horeses {
         		
         	for(int i=1; i<4; i++)
         	{        	  
-        	if(i==1) HoresMoney[k][i]=(int)(HoresMoney[k][i]*3*rank[k]);
-        	if(i==2) HoresMoney[k][i]=(int)(HoresMoney[k][i]*1.5*rank[k]);
-        	if(i==3) HoresMoney[k][i]=(int)(HoresMoney[k][i]*1.25*rank[k]);
+        	if(i==1) HoresMoney[k][i]=(double)(HoresMoney[k][i]*3);
+        	if(i==2) HoresMoney[k][i]=(double)(HoresMoney[k][i]*1.5);
+        	if(i==3) HoresMoney[k][i]=(double)(HoresMoney[k][i]*1.25);
         	}
         	 
         	for(int i=1; i<4; i++) 
         	{
             HoresMoney[k][0]=HoresMoney[k][0]+HoresMoney[k][i];	
         	}
+        	HoresMoney[k][0]=(int)(HoresMoney[k][0]*rank[k]*Bonus[k]);
         	}
         	
         	if(Hores[k]!=20) {
@@ -147,7 +157,7 @@ public class Horeses {
 		if(times<4 || goal==1)
 		{
 		for(int i=1 ; i<7;i++) {
-		System.out.print(i+"번말 금액: "+ HoresMoney[i][0] +"원");		
+		System.out.print(i+"번말 금액: "+ (int)(HoresMoney[i][0]) +"원");		
 		System.out.println("         "+i+"번말 금액: "+ PHoresMoney[i] +"원");
 		}
 		}

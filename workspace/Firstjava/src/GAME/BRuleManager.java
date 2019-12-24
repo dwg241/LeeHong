@@ -46,7 +46,7 @@ public class BRuleManager {
 				if(Bmoney<id.money) {
 				break;
 				}
-				System.out.println("보유하고 있는 "+id.money+"원 보다 많습니다.");
+				System.out.println("보유하고 있는 "+(int)(id.money)+"원 보다 많습니다.");
 
 				}
 	      
@@ -65,7 +65,7 @@ public class BRuleManager {
 	    	
 			System.out.println("블랙잭 win");
 			 id.money=id.money+2*Bmoney;
-			 System.out.println( id.name +"님의 잔액: "+ id.money+"원");
+			 System.out.println( id.name +"님의 잔액: "+ (int)(id.money)+"원");
 			 return;
 	    }
 
@@ -91,7 +91,7 @@ public class BRuleManager {
 		    System.out.println("lose");
 		
 		    id.money=id.money-Bmoney;
-		    System.out.println(id.name +"님의 잔액: "+ id.money+"원");
+		    System.out.println(id.name +"님의 잔액: "+ (int)(id.money)+"원");
 		    if(id.money<0) {
 				System.out.println(id.name+ "님은 파산했습니다.");
 				System.out.println(id.name+ "님은 100원이 자동충전됩니다.");
@@ -105,7 +105,7 @@ public class BRuleManager {
 		    {
 		    System.out.println("블랙잭 Win");
 		    id.money=id.money+2*Bmoney;
-		    System.out.println(id.name +"님의 잔액: "+ id.money+"원");
+		    System.out.println(id.name +"님의 잔액: "+ (int)(id.money)+"원");
 		    
 		    break;
 		    }
@@ -132,7 +132,7 @@ public class BRuleManager {
 		 
 		    System.out.println("lose");
 		    id.money=id.money-Bmoney;
-			System.out.println(id.name +"님의 금액: "+ id.money+"원");
+			System.out.println(id.name +"님의 금액: "+ (int)(id.money)+"원");
 			if(id.money<0) {
 					System.out.println(id.name+ "님은 파산했습니다.");
 					System.out.println(id.name+ "님은 100원이 자동충전됩니다.");
@@ -146,7 +146,7 @@ public class BRuleManager {
 		    {
 		    System.out.println("Win");
 		    id.money=id.money+Bmoney;
-			System.out.println(id.name +"님의 금액: "+ id.money+"원");
+			System.out.println(id.name +"님의 금액: "+ (int)(id.money)+"원");
 		    break;
 		    }
 		}

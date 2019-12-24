@@ -95,8 +95,8 @@ private static void BlackJack() {
 			System.out.println("전체베팅액 5등: 2.2배     1라운드: 3배");
 			System.out.println("전체베팅액 4등: 1.9배     2라운드: 1.5배      ");
 			System.out.println("전체베팅액 3등: 1.6배     3라운드: 1.25배 ");
-			System.out.println("전체베팅액 2등: 1.3배 ");
-			System.out.println("전체베팅액 1등: 1배 ");
+			System.out.println("전체베팅액 2등: 1.3배     이달의 馬: 0.9배");
+			System.out.println("전체베팅액 1등: 1배         최악의 馬: 10배");
 			System.out.println("");
 			System.out.println("메뉴를 입력해주세요.");
 			System.out.println("1. 게임시작/다시시작");

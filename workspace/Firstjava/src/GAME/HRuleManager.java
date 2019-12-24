@@ -31,6 +31,13 @@ public class HRuleManager {
 		Horeses h= new Horeses();
 	    int times=0;
 		int Bmoney=0;
+		int best=(int)(Math.random()*6+1);
+		int worst=(int)(Math.random()*6+1);
+		
+		while(worst==best) {
+		best =(int)(Math.random()*6+1);
+		}
+	
 		
 		System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
 		for(int i=1 ; i<7;i++) {
@@ -38,7 +45,8 @@ public class HRuleManager {
         System.out.println("馬");
 		}
          System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
-		while(true) {
+		System.out.println("이달의 馬: "+best+"번    최악의馬: "+worst+"번");
+         while(true) {
 			times++;
 			if(times<4) {
 			System.out.println("");
@@ -69,7 +77,7 @@ public class HRuleManager {
 		   
 			}
 			
-			h.Start(times);
+			h.Start(times,worst,best);
 			h.PeopleMoney(times);
 			h.Moneychart(times);
 			
@@ -78,7 +86,7 @@ public class HRuleManager {
 				{
 			    id.money=id.money+h.HoresMoney[i][0]; 
 				}
-				System.out.println(id.name +"님의 잔액: " +id.money+"원");
+				System.out.println(id.name +"님의 잔액: " +(int)(id.money)+"원");
 				if(id.money<0) {
 					System.out.println(id.name+ "님은 파산했습니다.");
 					System.out.println(id.name+ "님은 100원이 자동충전됩니다.");
