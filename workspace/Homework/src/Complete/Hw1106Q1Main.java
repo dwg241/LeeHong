@@ -11,15 +11,16 @@ public class Hw1106Q1Main {
 		System.out.println("밑변과 넓이를 입력하고 싶으면 1을 누르세요!");
 		
 		while(true) {
-			int menu= kb.nextInt();;
+			int menu= kb.nextInt();
 			if(menu==1) {
 				
 				System.out.println("밑변을 입력하세요!");
-				int bottom= kb.nextInt();;
+				int bottom= kb.nextInt();
 				System.out.println("높이를 입력하세요!");
-				int high= kb.nextInt();;
+				int high= kb.nextInt();
 				triangle.Calculation(bottom, high);
 				triangle.CalculationShow();
+				triangle.M(kb);
 			}
 			else if(menu==2)
 			{

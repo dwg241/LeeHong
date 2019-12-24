@@ -1,9 +1,9 @@
-package BlackJack2;
+package BlackJack;
 
 import java.util.Scanner;
 
 //기능 클래스
-public class RuleManager {
+public class GameMenu {
 
 	Player[] pBook ;
 	
@@ -12,18 +12,18 @@ public class RuleManager {
 	
 	Scanner sc;
 	String name;
-	public static RuleManager getInstance() {
+	public static GameMenu getInstance() {
 		if(m==null) {
-			return new RuleManager();
+			return new GameMenu();
 		} else {
 			return m;
 		}
 		
 	}
 	
-	private static RuleManager m = new RuleManager();
+	private static GameMenu m = new GameMenu();
 	
-	private RuleManager() {
+	private GameMenu() {
 	    pBook = new Player[5];
 		sc = new Scanner(System.in);
 	}

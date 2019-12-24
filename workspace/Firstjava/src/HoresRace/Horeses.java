@@ -1,4 +1,4 @@
-package GAME;
+package HoresRace;
 
 public class Horeses {
 

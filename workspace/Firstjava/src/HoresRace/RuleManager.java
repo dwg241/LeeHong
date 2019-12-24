@@ -1,4 +1,4 @@
-package game;
+package HoresRace;
 
 import java.util.Scanner;
 
@@ -9,7 +9,6 @@ public class RuleManager {
 	
 	
 	int cnt;
-	
 	Scanner sc;
 	String name;
 	public static RuleManager getInstance() {
@@ -58,7 +57,9 @@ public class RuleManager {
          System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
 		while(true) {
 			times++;
+			if(times<4) {
 			System.out.println("");
+			System.out.println("베팅을 걸지 않으려면 0원을 입력하세요!");
 		    System.out.println("베팅금액을 입력해주세요!");
 			int Bmoney = sc.nextInt();
 			if(Bmoney!=0) {
@@ -66,6 +67,11 @@ public class RuleManager {
 			System.out.println("[1] [2] [3] [4] [5] [6]");
 			int hores = sc.nextInt();
 			h.insertmoney(hores, Bmoney, times);
+			}
+			}
+			if(times>3) {
+		    System.out.println(times+ " Round 진행하고 싶으면 엔터를 누르세요.");
+		    String go = sc.nextLine();
 			}
 			h.Start(times);
 			h.PeopleMoney(times);
@@ -76,7 +82,7 @@ public class RuleManager {
 				{
 			    pBook[1].money=pBook[1].money+h.HoresMoney[i][0]; 
 				}
-				System.out.println(name +"님의 잔액: " +pBook[1].money);
+				System.out.println(name +"님의 잔액: " +pBook[1].money+"원");
 				break;
 			
 			}

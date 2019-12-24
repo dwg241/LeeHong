@@ -7,14 +7,12 @@ public class BlackMain {
 			// TODO Auto-generated method stub
 
 			//PhoneBookManager manager = new PhoneBookManager();
-			RuleManager manager = RuleManager.getInstance();
-			System.out.println("==========블랙잭 게임 듀토리얼=========");
+			BRuleManager manager = BRuleManager.getInstance();
+              System.out.println("==========블랙잭 게임 듀토리얼=========");
 			
-     		manager.moneyset();
-			
-		
-			
-				while (true) {
+     		    manager.moneyset();     
+				
+     		   while (true) {
 				System.out.println("===블랙잭 게임에 오신걸 환영합니다!===");
 				System.out.println("메뉴를 입력해주세요.");
 				System.out.println("1. 게임시작/다시시작");
