@@ -3,22 +3,22 @@ package GAME;
 import java.util.Scanner;
 
 //기능 클래스
-public class BRuleManager {
+public class BlackManager {
 
 	Scanner sc;
 	String name;
-	public static BRuleManager getInstance() {
+	public static BlackManager getInstance() {
 		if(m==null) {
-			return new BRuleManager();
+			return new BlackManager();
 		} else {
 			return m;
 		}
 		
 	}
 	
-	private static BRuleManager m = new BRuleManager();
+	private static BlackManager m = new BlackManager();
 	
-	private BRuleManager() {
+	private BlackManager() {
 	    
 		sc = new Scanner(System.in);
 	}

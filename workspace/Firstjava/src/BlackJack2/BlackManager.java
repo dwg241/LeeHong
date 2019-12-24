@@ -3,7 +3,7 @@ package BlackJack2;
 import java.util.Scanner;
 
 //기능 클래스
-public class BRuleManager {
+public class BlackManager {
 
 	Player[] pBook ;
 	
@@ -12,18 +12,18 @@ public class BRuleManager {
 	
 	Scanner sc;
 	String name;
-	public static BRuleManager getInstance() {
+	public static BlackManager getInstance() {
 		if(m==null) {
-			return new BRuleManager();
+			return new BlackManager();
 		} else {
 			return m;
 		}
 		
 	}
 	
-	private static BRuleManager m = new BRuleManager();
+	private static BlackManager m = new BlackManager();
 	
-	private BRuleManager() {
+	private BlackManager() {
 	    pBook = new Player[5];
 		sc = new Scanner(System.in);
 	}

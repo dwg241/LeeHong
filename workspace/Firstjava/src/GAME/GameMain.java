@@ -59,7 +59,7 @@ private static void SignUp() {
 
 private static void BlackJack() {
 			// TODO Auto-generated method stub
-			BRuleManager BR = BRuleManager.getInstance();
+			BlackManager BM = BlackManager.getInstance();
 			while (true) {
 					System.out.println("===블랙잭 게임에 오신걸 환영합니다!===");
 					System.out.println("메뉴를 입력해주세요.");
@@ -67,12 +67,12 @@ private static void BlackJack() {
 					System.out.println("2. 게임메뉴/돌아가기");
 					System.out.println("===========================");
 
-					int select2 = BR.sc.nextInt();
-					BR.sc.nextLine();
+					int select2 = BM.sc.nextInt();
+					BM.sc.nextLine();
 
 					switch (select2) {
 					case 1:
-						BR.machine(select2,id);
+						BM.machine(select2,id);
 						break;
 					
 		            case 2:
@@ -86,7 +86,7 @@ private static void BlackJack() {
 
     private static void HorseRace() {
 
-		     HRuleManager HR = HRuleManager.getInstance();
+		     HorseManager HM = HorseManager.getInstance();
 		
 			while (true) {
 			System.out.println("=====경마 게임에 오신걸 환영합니다!=====");
@@ -103,12 +103,12 @@ private static void BlackJack() {
 			System.out.println("2. 게임메뉴/돌아가기");
 			System.out.println("===========================");
 
-			int select = HR.sc.nextInt();
-			HR.sc.nextLine();
+			int select = HM.sc.nextInt();
+			HM.sc.nextLine();
 
 			switch (select) {
 			case 1:
-				HR.machine(select,id);
+				HM.machine(select,id);
 				break;
 			
             case 2:

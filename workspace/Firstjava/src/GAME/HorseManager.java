@@ -3,24 +3,24 @@ package GAME;
 import java.util.Scanner;
 
 //기능 클래스
-public class HRuleManager {
+public class HorseManager {
 
 	
 	
 	Scanner sc;
 	String name;
-	public static HRuleManager getInstance() {
+	public static HorseManager getInstance() {
 		if(m==null) {
-			return new HRuleManager();
+			return new HorseManager();
 		} else {
 			return m;
 		}
 		
 	}
 	
-	private static HRuleManager m = new HRuleManager();
+	private static HorseManager m = new HorseManager();
 	
-	private HRuleManager() {
+	private HorseManager() {
 	    
 		sc = new Scanner(System.in);
 	}
