@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class GameMain {
 	
 	static Scanner kb = new Scanner(System.in);
-	static ID id = new ID();
+	static ID id = null;
 public static void main(String[] args) {
 			// TODO Auto-generated method stub      	
 

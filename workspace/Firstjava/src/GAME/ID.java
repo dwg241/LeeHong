@@ -12,9 +12,7 @@ String name;
 		
 	}
 
-	public ID() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 
 
