@@ -56,7 +56,7 @@ public class HorseManager {
 			while(true) {
 				System.out.println("베팅금액을 입력해주세요!");
 				Bmoney = sc.nextInt();
-				if(Bmoney<id.money) {
+				if(Bmoney<=id.money) {
 				break;
 				}
 				System.out.println("보유하고 있는 "+id.money+"원 보다 많습니다.");
@@ -74,7 +74,7 @@ public class HorseManager {
 			if(times>3) {
 		    System.out.println(times+ " Round 진행하고 싶으면 엔터를 누르세요.");
 		    String go = sc.nextLine();
-		   
+		    sc.nextLine();
 			}
 			
 			h.Start(times,worst,best);
@@ -87,7 +87,7 @@ public class HorseManager {
 			    id.money=id.money+h.HoresMoney[i][0]; 
 				}
 				System.out.println(id.name +"님의 잔액: " +(int)(id.money)+"원");
-				if(id.money<0) {
+				if(id.money<=0) {
 					System.out.println(id.name+ "님은 파산했습니다.");
 					System.out.println(id.name+ "님은 100원이 자동충전됩니다.");
 					id.money=100;
