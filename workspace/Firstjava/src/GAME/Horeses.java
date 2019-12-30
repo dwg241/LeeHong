@@ -15,30 +15,31 @@ public class Horeses {
 	
 	void insertmoney(int horse , int Bmoney, int Round)
 	{
-             if(horse==1) { 
+          if(horse==1) { 
              HoresMoney[1][Round]=Bmoney;
              HoresMoney[1][0]=HoresMoney[1][0]+HoresMoney[1][Round];
          }
-         else if(horse==2) { 
+         if(horse==2) { 
              HoresMoney[2][Round]=Bmoney;
-             HoresMoney[2][0]=HoresMoney[2][0]+HoresMoney[1][Round];
+             HoresMoney[2][0]=HoresMoney[2][0]+HoresMoney[2][Round];
              }
-         else if(horse==3) { 
+         if(horse==3) { 
              HoresMoney[3][Round]=Bmoney;
-             HoresMoney[3][0]=HoresMoney[3][0]+HoresMoney[1][Round];
+             HoresMoney[3][0]=HoresMoney[3][0]+HoresMoney[3][Round];
              }
-         else if(horse==4) { 
+         if(horse==4) { 
              HoresMoney[4][Round]=Bmoney;
-             HoresMoney[4][0]=HoresMoney[4][0]+HoresMoney[1][Round];
+             HoresMoney[4][0]=HoresMoney[4][0]+HoresMoney[4][Round];
              }
-         else if(horse==5) { 
+         if(horse==5) { 
              HoresMoney[5][Round]=Bmoney;
-             HoresMoney[5][0]=HoresMoney[5][0]+HoresMoney[1][Round];
+             HoresMoney[5][0]=HoresMoney[5][0]+HoresMoney[5][Round];
              }
-         else if(horse==6) { 
+         if(horse==6) { 
              HoresMoney[6][Round]=Bmoney;
-             HoresMoney[6][0]=HoresMoney[6][0]+HoresMoney[1][Round];
+             HoresMoney[6][0]=HoresMoney[6][0]+HoresMoney[6][Round];
              }
+             System.out.println((int)(HoresMoney[4][0]));
          
 	}
 
