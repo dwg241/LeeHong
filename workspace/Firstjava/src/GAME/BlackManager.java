@@ -29,8 +29,8 @@ public class BlackManager {
 	void machine(int select, ID id) {
 		
 		
-		Player pi= new Player();
-		Card ai = new Card();
+		BPlayer pi= new BPlayer();
+		BCard ai = new BCard();
 		int count=1;
 		
 		int Sum=0;
@@ -43,7 +43,7 @@ public class BlackManager {
 		 while(true) {
 				System.out.println("베팅금액을 입력해주세요!");
 				Bmoney = sc.nextInt();
-				if(Bmoney<id.money) {
+				if(Bmoney<=id.money) {
 				break;
 				}
 				System.out.println("보유하고 있는 "+(int)(id.money)+"원 보다 많습니다.");
@@ -92,7 +92,7 @@ public class BlackManager {
 		
 		    id.money=id.money-Bmoney;
 		    System.out.println(id.name +"님의 잔액: "+ (int)(id.money)+"원");
-		    if(id.money<0) {
+		    if(id.money<=0) {
 				System.out.println(id.name+ "님은 파산했습니다.");
 				System.out.println(id.name+ "님은 100원이 자동충전됩니다.");
 				id.money=100;
@@ -112,7 +112,7 @@ public class BlackManager {
 		    
 	    }
 		if(menu==2){
-			Dealer di = new Dealer();
+			BDealer di = new BDealer();
 			
 			
 			if(pi.Sum2>pi.Sum) {
@@ -133,7 +133,7 @@ public class BlackManager {
 		    System.out.println("lose");
 		    id.money=id.money-Bmoney;
 			System.out.println(id.name +"님의 금액: "+ (int)(id.money)+"원");
-			if(id.money<0) {
+			if(id.money<=0) {
 					System.out.println(id.name+ "님은 파산했습니다.");
 					System.out.println(id.name+ "님은 100원이 자동충전됩니다.");
 					id.money=100;

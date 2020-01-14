@@ -86,7 +86,7 @@ public class Horeses {
 	
 		Hores[maxi]=20;
 		System.out.println("========== "+Round+" Round ==========");
-		System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
+		System.out.println("🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳");
 		for(int j=1 ; j<7;j++){
 		System.out.print(j+"번 레인|");
 		
@@ -99,15 +99,15 @@ public class Horeses {
 		}
 		}
 		if(arrive==0) {
-		System.out.println("馬");
+		System.out.println("🐎");
 		} 
 		if(arrive==1){
-	    System.out.println("馬 도착!");
+	    System.out.println("🐎도착🏳‍");
 	    goal=1;
 	    arrive=0;
 		}
 		}
-        System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
+        System.out.println("🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳");
          
     		 
 	}
