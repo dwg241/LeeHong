@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HorseManager {
 
 	
-	
+	String H="🐎";
 	Scanner sc;
 	String name;
 	public static HorseManager getInstance() {
@@ -39,13 +39,13 @@ public class HorseManager {
 		}
 	
 		
-		System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
+		System.out.println("🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳");
 		for(int i=1 ; i<7;i++) {
 		System.out.print(i+"번 레인|");
-        System.out.println("馬");
+        System.out.println(H);
 		}
-         System.out.println("♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
-		System.out.println("이달의 馬: "+best+"번    최악의馬: "+worst+"번");
+        System.out.println("🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳");
+		System.out.println("이달의 🐎: "+best+"번    최악의🐎: "+worst+"번");
          while(true) {
 			times++;
 			if(times<4) {
@@ -54,20 +54,22 @@ public class HorseManager {
 		    
 			
 			while(true) {
+				System.out.println(id.name+"님의 보유금액: "+(int)(id.money)+"원");
 				System.out.println("베팅금액을 입력해주세요!");
 				Bmoney = sc.nextInt();
 				if(Bmoney<=id.money) {
-				break;
+					 id.money=id.money-Bmoney;
+					break;
 				}
-				System.out.println("보유하고 있는 "+id.money+"원 보다 많습니다.");
-			
+				System.out.println("보유하고 있는 "+(int)(id.money)+"원 보다 많습니다.");
+			  
 				}
 			
 			if(Bmoney!=0) {
 			System.out.println("몇번 말에 거시겠습니까!");
 			System.out.println("[1] [2] [3] [4] [5] [6]");
 			int hores = sc.nextInt();
-			sc.nextLine();
+		
 			h.insertmoney(hores, Bmoney, times);
 			}
 			}
