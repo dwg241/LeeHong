@@ -99,10 +99,10 @@ public class Horeses {
 		}
 		}
 		if(arrive==0) {
-		System.out.println("🐎");
+		System.out.println("🏇");
 		} 
 		if(arrive==1){
-	    System.out.println("🐎도착🏳‍");
+	    System.out.println("🏇도착🏳‍");
 	    goal=1;
 	    arrive=0;
 		}

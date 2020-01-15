@@ -44,6 +44,7 @@ public static void main(String[] args) {
 	            case 5:	
 	                
 	            	Ending();
+	            	break;
 	            case 0:
 					System.out.println("프로그램을 종료합니다.");
 					return;
@@ -56,6 +57,9 @@ public static void main(String[] args) {
 private static void Ending() {
 	if(id.money>1000){
 		System.out.println("당신은 도박왕입니다.");
+	}
+	else {
+		System.out.println("엔딩을 볼 수 없습니다.");
 	}
 	
 }
@@ -170,7 +174,7 @@ private static void Mable() {
 
 		switch (select2) {
 		case 1:
-			MM.machine(select2,id);
+			MM.machine(id);
 			break;
 		
         case 2:
@@ -197,7 +201,7 @@ private static void BlackJack() {
 
 					switch (select2) {
 					case 1:
-						BM.machine(select2,id);
+						BM.machine(id);
 						break;
 					
 		            case 2:
@@ -232,7 +236,7 @@ private static void HorseRace() {
 
 			switch (select) {
 			case 1:
-				HM.machine(select,id);
+				HM.machine(id);
 				break;
 			
             case 2:

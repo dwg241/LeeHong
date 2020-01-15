@@ -10,6 +10,8 @@ public class MPlayer {
 	int PDie2;
 	int Double=0;
 	int result=0; // 게임 결과값
+	int skip=0; //스타카드 스킵 
+	int star=0;// 스타넘버
 	String RandMark="🏰🏰"; //플레이어 랜드마크 건물
 	String Hotel="🏚 🏚";  //플레이어 호텔 건물
 	String Me="🚶🏴"; // 플레이어 말
@@ -56,15 +58,18 @@ public class MPlayer {
 		}
 		
 		//int PDie = kb.nextInt();
-		int PDie1 =(int)(Math.random()*6+1);
+		if(skip==0) {
+		int PDie1 =1;//(int)(Math.random()*6+1);
 		int P1=0;
 		DieShow(PDie1,P1,map);
-		int PDie2 = (int)(Math.random()*6+1);
+		int PDie2 =3; //(int)(Math.random()*6+1);
 		int P2=9;
 		DieShow(PDie2,P2,map);
 		System.out.println("주사위1: "+PDie1+" 주사위2: "+PDie2);
 		Player=Player+PDie1+PDie2;
-	    if(PDie1==PDie2)
+		
+		
+		if(PDie1==PDie2)
 	    {
 		System.out.println("더블! (한번 더 진행할 수 있습니다. 최대2번)");
 		Double++;
@@ -91,6 +96,11 @@ public class MPlayer {
 		 System.out.println(PLap+"바퀴 돌았습니다. 월급 10원을 받습니다.");
 		
 		}
+		}
+		skip=0;// 스킵 초기화
+		
+		if(star!=0) Player=star;
+		
 		
 		System.out.println(name[Player]+" 도착");
     	if(map.CH[Player].equals("   ")) {
@@ -110,7 +120,8 @@ public class MPlayer {
 		}
 		if(PLap<7)
     	GameAction(map,mc);  
-	    
+	    star=0; //번호초기화
+		
 	    }
 	
 	
@@ -193,23 +204,26 @@ public class MPlayer {
 	//////특수카드/////////////////////////////////////////////////////////
 	
 	private void StarCard(MMap map, MComputer mc) {
-		int ran = (int)(Math.random()*5+1);
+		int ran = 3;//(int)(Math.random()*5+1);
          
 		System.out.println(map.Card[ran]+" 당첨!!");
-		     if(ran==1){
-		    	 map.CH[Player]="   ";
-		    	 Player=21; 
-		     GameAction(map,mc);
+		 if(ran==1){
+		     
+		     star=21; 
+		     skip=1;
+		     PlayerDie(map,mc);
 		    	       }
 		else if(ran==2){
-			map.CH[Player]="   ";
-			 Player=14; 
-		     GameAction(map,mc);
+			
+			 star=14; 
+			 skip=1;
+		     PlayerDie(map,mc);
 		}
 		else if(ran==3) {
-			map.CH[Player]="   "; 
-			Player=1; 
-		     GameAction(map,mc);
+			
+			 star=1; 
+			 skip=1;
+		     PlayerDie(map,mc);
 		}
 		else if(ran==4)
 		{

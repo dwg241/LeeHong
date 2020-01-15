@@ -2,17 +2,34 @@ package GAME;
 
 public class BCard {
 	int CardSave [] = new int [30];
-	String Picture[] = {"공백","♣","♣2","♣3","♣4","♣5","♣6","♣7","♣8","♣9","♣10"
-                             ,"♣J","♣Q","♣K"
-                             ,"♠A","♠2","♠3","♠4","♠5","♠6","♠7","♠8","♠9","♠10"
-                             ,"♠J","♠Q","♠K"
-                             ,"♥A","♥2","♥3","♥4","♥5","♥6","♥7","♥8","♥9","♥10"
-                             ,"♥J","♥Q","♥K"
-                             ,"◆A","◆2","◆3","◆4","◆5","◆6","◆7","◆8","◆9","◆10"
-                             ,"◆J","◆Q","◆K"
+	String P[] = {"","♣","♣","♣","♣","♣","♣","♣","♣","♣","♣"
+                             ,"♣","♣","♣"
+                             ,"♠","♠","♠","♠","♠","♠","♠","♠","♠","♠"
+                             ,"♠","♠","♠"
+                             ,"♥","♥","♥","♥","♥","♥","♥","♥","♥","♥"
+                             ,"♥","♥","♥"
+                             ,"♦","♦","♦","♦","♦","♦","♦","♦","♦","♦"
+                             ,"♦","♦","♦"
                          };
-
-    int number [] = {0,1,2,3,4,5,6,7,8,9,10,10,10,10,
+	String N[] = {""," A"," 2"," 3"," 4"," 5"," 6"," 7"," 8"," 9","10"
+            ," J"," Q"," K"
+            ," A"," 2"," 3"," 4"," 5"," 6"," 7"," 8"," 9","10"
+            ," J"," Q"," K"
+            ," A"," 2"," 3"," 4"," 5"," 6"," 7"," 8"," 9","10"
+            ," J"," Q"," K"
+            ," A"," 2"," 3"," 4"," 5"," 6"," 7"," 8"," 9","10"
+            ," J"," Q"," K"
+        };
+    
+	String T[] = {"","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ "
+			        ,"┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ "
+			        ,"┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ "
+			        ,"┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ ","┌─────┐ "};
+    String B[] = {"","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ "
+    		        ,"└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ "
+    		        ,"└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ ","└─────┘ "};
+ 	
+	int number [] = {0,1,2,3,4,5,6,7,8,9,10,10,10,10,
                        1,2,3,4,5,6,7,8,9,10,10,10,10,
                        1,2,3,4,5,6,7,8,9,10,10,10,10,
                        1,2,3,4,5,6,7,8,9,10,10,10,10};
@@ -35,14 +52,52 @@ public class BCard {
    }
     
     void GiveShow(int count) {
-    	for(int i=1 ; i<count ; i++) {
-    	System.out.print(Picture[CardSave[i]]+"  ");	
-    }
+   for(int i=1; i<count; i++)
+   { System.out.print(T[i]);
+   }
+   System.out.println("");
+   for(int i=1; i<count; i++)
+   { System.out.print("│"+P[CardSave[i]]+"    │ "); 
+   }
+   System.out.println("");
+   for(int i=1; i<count; i++)
+   { 
+    System.out.print("│ "+N[CardSave[i]]+"  │ "); 
+   }
+   System.out.println("");
+   for(int i=1; i<count; i++) {
+	   System.out.print("│    "+P[CardSave[i]]+"│ ");
+   }
+   System.out.println("");
+   for(int i=1; i<count; i++)
+   { System.out.print(B[i]);
+   }
+   
+   
     }	
    void DGiveShow(int Dcount, int count) {
-	   for(int i=count ; i<Dcount ; i++) {
-	    	System.out.print(Picture[CardSave[i]]+"  ");
 	   
-   }
+	   for(int i=count ; i<Dcount ; i++)
+	   { System.out.print(T[i]);
+	   }
+	   System.out.println("");
+	   for(int i=count ; i<Dcount ; i++)
+	   { System.out.print("│"+P[CardSave[i]]+"    │ "); 
+	   }
+	   System.out.println("");
+	   for(int i=count ; i<Dcount ; i++)
+	   { 
+	    System.out.print("│ "+N[CardSave[i]]+"  │ "); 
+	   }
+	   System.out.println("");
+	   for(int i=count ; i<Dcount ; i++)
+	   {
+	   System.out.print("│    "+P[CardSave[i]]+"│ ");
+	   }
+	   System.out.println("");
+	   for(int i=count ; i<Dcount ; i++)
+	   { 
+		System.out.print(B[i]);
+	   }
 }
 }

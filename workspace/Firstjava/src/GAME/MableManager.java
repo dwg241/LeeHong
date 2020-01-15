@@ -29,7 +29,7 @@ public class MableManager {
 	}
 	
 	
-	void machine(int select, ID id) {
+	void machine(ID id) {
 		MMap map = new MMap();
 		MComputer mc = new MComputer();
 		MPlayer mp = new MPlayer();

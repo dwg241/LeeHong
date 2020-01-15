@@ -26,7 +26,7 @@ public class BlackManager {
 
 	
 
-	void machine(int select, ID id) {
+	void machine( ID id) {
 		
 		
 		BPlayer pi= new BPlayer();

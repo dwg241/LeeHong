@@ -5,12 +5,11 @@ import java.util.Scanner;
 //기능 클래스
 public class HorseManager {
 
-	
-	String H="🐎";
 	Scanner sc;
-	String name;
+	String H="🏇";
+	
 	public static HorseManager getInstance() {
-		if(m==null) {
+	if(m==null) {
 			return new HorseManager();
 		} else {
 			return m;
@@ -22,11 +21,11 @@ public class HorseManager {
 	
 	private HorseManager() {
 	    
-		sc = new Scanner(System.in);
+	 sc = new Scanner(System.in);
 	}
 	
 	
-	void machine(int select, ID id) {
+	void machine( ID id) {
 	 
 		Horeses h= new Horeses();
 	    int times=0;
@@ -45,7 +44,7 @@ public class HorseManager {
         System.out.println(H);
 		}
         System.out.println("🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳");
-		System.out.println("이달의 🐎: "+best+"번    최악의🐎: "+worst+"번");
+		System.out.println("이달의 🏇: "+best+"번    최악의🏇: "+worst+"번");
          while(true) {
 			times++;
 			if(times<4) {

@@ -59,7 +59,7 @@ public class BDealer  {
 				
 			}
 
-			if(this.DSum>Sum) {
+			if(this.DSum>=Sum) {
 
 				this.result=1;
 				break;
