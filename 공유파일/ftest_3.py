@@ -118,6 +118,7 @@ def ftest_1fiter():
 	conn.row_factory=sqlite3.Row
 
 	c = conn.cursor()
+	
 
 	c.execute("select*FROM test_1 WHERE get < 11")
 
