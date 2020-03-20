@@ -97,6 +97,7 @@ def ftest_1avg():
 @app.route('/ftest_1sp')
 def ftest_1sp():
 
+	
 	conn = sqlite3.connect('DB_23.db')
 
 	conn.row_factory=sqlite3.Row
