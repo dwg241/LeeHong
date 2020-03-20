@@ -69,6 +69,7 @@ try:
             soil_turn='on'
             time.sleep(2)
 
+	
         elif adcValue >700 :
             GPIO.output(A1A,False)
             soil_name='토양습도'
