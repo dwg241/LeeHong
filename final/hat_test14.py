@@ -16,3 +16,4 @@ while True:
         print('DHT{0}, humidity & temperature: {1}'.format(sensor.dht_type, temp))
     time.sleep(1)
 
+    
