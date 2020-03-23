@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <h1 align="center"><img src="{{ url_for('static', filename='image/smart.jpg') }}"></h1>
+    
+    <link type="text/css" rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>값:{{test}}</h1>
+    <table width="700" height="300" align="center">
+        <thead>
+        <td align="center"><img src="{{ url_for('static', filename='image/plant.jpg') }}" width="300" height="450" ></td>
+        <td align="center"> 
+        <!-- <span style = " font-size:1.2em; font-weight: bold ;  color: black;"> </span>-->
+        <a href="/menu_1"><img src="{{ url_for('static', filename='image/tem.jpg') }}"></a><br><br>
+        <a href="/human"><img src="{{ url_for('static', filename='image/hum.jpg') }}"></a><br><br>
+        <a href="/ftest_1sp"><img src="{{ url_for('static', filename='image/so.jpg') }}"></a><br><br>
+        <a href="/ftest_1fiter"><img src="{{ url_for('static', filename='image/wat.jpg') }}"></a>
+        </td>
+        </thead>
+     
+      </table>
+  </body>
+</html>
