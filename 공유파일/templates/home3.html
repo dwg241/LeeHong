@@ -1,5 +1,3 @@
-!!!!!!!!!!!!!! 실행파일 폴더안에 templates 폴더가 있어야하고 templates 폴더안에 html이 있어야합니다,!!
-
 <!DOCTYPE html>
 <html >
   <head>
@@ -8,13 +6,13 @@
     <link type="text/css" rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>값:{{test}}</h1>
-    <table width="700" height="300" align="center">
+    <h1>값: {{test}}</h1>
+    <table width="700" height="300" align="center"> # 테이블 만드는 설정코딩
         <thead>
         <td align="center"><img src="{{ url_for('static', filename='image/plant.jpg') }}" width="300" height="450" ></td>
         <td align="center"> 
         <!-- <span style = " font-size:1.2em; font-weight: bold ;  color: black;"> </span>-->
-        <a href="/menu_1"><img src="{{ url_for('static', filename='image/tem.jpg') }}"></a><br><br>
+        <a href="/menu_1"><img src="{{ url_for('static', filename='image/tem.jpg') }}"></a><br><br> # href= 클릭하면 접속되는 주소 , img 이미지 첨부
         <a href="/human"><img src="{{ url_for('static', filename='image/hum.jpg') }}"></a><br><br>
         <a href="/ftest_1sp"><img src="{{ url_for('static', filename='image/so.jpg') }}"></a><br><br>
         <a href="/ftest_1fiter"><img src="{{ url_for('static', filename='image/wat.jpg') }}"></a>
@@ -24,4 +22,3 @@
       </table>
   </body>
 </html>
-
