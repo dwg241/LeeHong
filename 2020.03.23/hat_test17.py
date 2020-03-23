@@ -24,6 +24,7 @@ def gethum():
             result="{},{}".format(t, h)
 
         else :
+            
 
             result='Read error'
     
