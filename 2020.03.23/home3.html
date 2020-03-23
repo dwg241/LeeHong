@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <h1 align="center"><img src="{{ url_for('static', filename='image/smart.jpg') }}"></h1>
+    
+    <link type="text/css" rel="stylesheet" href="index.css">
+  </head>
+  <body>
+   {{test}}
+    <table width="700" height="300" align="center"> # 테이블 만드는 설정코딩
+        <thead>
+        <td align="center"><img src="{{ url_for('static', filename='image/plant.jpg') }}" width="300" height="450" ></td>
+        <td align="center"> 
+        <!-- <span style = " font-size:1.2em; font-weight: bold ;  color: black;"> </span>-->
+        <a href="/menu_1"><img src="{{ url_for('static', filename='image/tem.jpg') }}"></a><br><br> # href= 클릭하면 접속되는 주소 , img 이미지 첨부
+        <a href="/dht_db"><img src="{{ url_for('static', filename='image/hum.jpg') }}"></a><br><br>
+        <a href="/ftest_1sp"><img src="{{ url_for('static', filename='image/so.jpg') }}"></a><br><br>
+        <a href="/ftest_1fiter"><img src="{{ url_for('static', filename='image/wat.jpg') }}"></a>
+        </td>
+        </thead>
+     
+      </table>
+  </body>
+</html>
