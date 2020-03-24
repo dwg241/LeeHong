@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Epilogue by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+  <meta charset="utf-8" />
+  <title> </title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+
+<body>
+  <center>
+    <br>
+    <h4> 현재 센서값: {{ dhtnow }}</h3>
+    <br>
+
+    <canvas id="chart" width="1000" height="600"></canvas>
+    <script>
+
+      // bar chart data
+      var barData = {
+        labels : [
+          {% for row in rows %}
+            "{{ row[0] }}",
+          {% endfor %}
+        ],
+
+        datasets : [{
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          bezierCurve : false,
+          data : [
+	    {% for row in rows %}
+              {{ row[1] }},
+            {% endfor %}]
+          }
+	]
+      }
+
+      Chart.defaults.global.animationSteps = 50;
+      Chart.defaults.global.tooltipYPadding = 16;
+      Chart.defaults.global.tooltipCornerRadius = 0;
+      Chart.defaults.global.tooltipTitleFontStyle = "normal";
+      Chart.defaults.global.tooltipFillColor = "rgba(0,0,0,0.8)";
+      Chart.defaults.global.animationEasing = "easeOutBounce";
+      Chart.defaults.global.responsive = false;
+      Chart.defaults.global.scaleLineColor = "black";
+      Chart.defaults.global.scaleFontSize = 16;
+
+      // get bar chart canvas
+      var mychart = document.getElementById("chart").getContext("2d");
+
+      steps = 10
+      max = {{ max }}
+      // draw bar chart
+      var LineChartDemo = new Chart(mychart).Line(barData, {
+        scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true,
+        bezierCurve: false,
+      });
+
+    </script>
+  </center>
+  <br><br><br><br><br><br><br>
+  <section class="main items">
+    <article class="item">
+      <header>
+        <a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/01.jpg') }}" alt="" /></a>
+        <h3>Temperature & Humidity Sensor</h3>
+      </header>
+      <p>it is involved in pan and humidification module by measuring the temperature and humidity.
+      </p>
+      <ul class="actions">
+        <li><a href="/graph" class="button">More</a></li>
+      </ul>
+    </article>
+    <article class="item">
+      <header>
+        <a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/02.jpg') }}" alt="" /></a>
+        <h3>Water Sensor</h3>
+      </header>
+      <p>It is involved in the operation of the water pump by measuring the moisture in the soil.</p>
+      <ul class="actions">
+        <li><a href="{{ url_for('static', filename='#') }}" class="button">More</a></li>
+      </ul>
+    </article>
+    <article class="item">
+      <header>
+        <a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/03.jpg') }}" alt="" /></a>
+        <h3>Moisture Sensor</h3>
+      </header>
+      <p>It is used in the water pump module's water tank to indicate the current water level.</p>
+      <ul class="actions">
+        <li><a href="{{ url_for('static', filename='#') }}" class="button">More</a></li>
+      </ul>
+    </article>
+    <article class="item">
+      <header>
+        <a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/04.jpg') }}" alt="" /></a>
+        <h3>Sunlight Sensor</h3>
+      </header>
+      <p>It measures sunlight around.When there is insufficient sunlight, The LED module works.</p>
+      <ul class="actions">
+        <li><a href="{{ url_for('static', filename='#') }}" class="button">More</a></li>
+      </ul>
+    </article>
+  </section>
+
+				
+</body>
+</html>

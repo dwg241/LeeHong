@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Epilogue by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Epilogue by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>My Little Garden</h1>
+					<p>Planting guider for modern people..</p>
+				</div>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<h3 align="center">실시간 센서 현황</h1>
+							<span style = " font-size:0.9em; font-weight: bold ;  color: black;"> 
+							공기센서: {{dht11}}   
+							<!-- 여기밑에 이제 {{센서2}}, {{센서3}} 값을 써주서 받아오면 됩니다!! 여기만 보시면 되고 나머지는 필요없어요!! -->
+							</span>
+
+					</section>
+
+				<!-- Items -->
+					<section class="main items">
+						<article class="item">
+							<header>
+								<a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/01.jpg') }}" alt="" /></a>
+								<h3>Temperature & Humidity Sensor</h3>
+							</header>
+							<p>it is involved in pan and humidification module by measuring the temperature and humidity.
+							</p>
+							<ul class="actions">
+								<li><a href="/graph" class="button">More</a></li>
+								<!-- 위에가 graph 주소값! -->
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/02.jpg') }}" alt="" /></a>
+								<h3>Water Sensor</h3>
+							</header>
+							<p>It is involved in the operation of the water pump by measuring the moisture in the soil.</p>
+							<ul class="actions">
+								<li><a href="{{ url_for('static', filename='#') }}" class="button">More</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/03.jpg') }}" alt="" /></a>
+								<h3>Moisture Sensor</h3>
+							</header>
+							<p>It is used in the water pump module's water tank to indicate the current water level.</p>
+							<ul class="actions">
+								<li><a href="{{ url_for('static', filename='#') }}" class="button">More</a></li>
+							</ul>
+						</article>
+						<article class="item">
+							<header>
+								<a href="{{ url_for('static', filename='#') }}"><img src="{{ url_for('static', filename='image/04.jpg') }}" alt="" /></a>
+								<h3>Sunlight Sensor</h3>
+							</header>
+							<p>It measures sunlight around.When there is insufficient sunlight, The LED module works.</p>
+							<ul class="actions">
+								<li><a href="{{ url_for('static', filename='#') }}" class="button">More</a></li>
+							</ul>
+						</article>
+					</section>
+
+				<!-- CTA -->
+					<section id="cta" class="main special">
+						<h2>Would you like to join us?</h2>
+						<p>If you want to keep your plants well, please click the button below.</p>
+						<ul class="actions">
+							<li><a href="{{ url_for('static', filename='#') }}" class="button big">Join</a></li>
+						</ul>
+					</section>
+
+				<!-- Main -->
+				<!--
+					<section id="main" class="main">
+						<header>
+							<h2>Lorem ipsum dolor</h2>
+						</header>
+						<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					</section>
+				-->
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="{{ 'https://twitter.com/' }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="{{ 'https://www.facebook.com/' }}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="{{ 'https://www.instagram.com/' }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="{{ 'https://kr.linkedin.com/' }}" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="{{ 'https://www.google.com/intl/ko/gmail/about/' }}" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="{{ url_for('static', filename='https://templated.co') }}">TEMPLATED</a>. Images: <a href="{{ url_for('static', filename='https://unsplash.com') }}">Unsplash</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
