@@ -23,6 +23,7 @@ def graph():
     return render_template('graph_2.html',max=30, values=rows, dhtnow=hat_test17.gethum()) 
 	#max는 y값 크기, row값을 values로 받아온다. 현재창 업데이트를 위해 dhtnow가 필요
 
+	
 
 
 if __name__=='__main__':
