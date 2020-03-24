@@ -26,6 +26,7 @@ def gethum():
             time.sleep(2)
 
       
+    
             result="Tempearture " "{}℃, " " humanity " "{}%".format(t, h)
 
         else :
