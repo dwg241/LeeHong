@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <h1>스마트 화분 만들기</h1>
+    
+    
+  </head>
+  <body>
+        <h2 align="center">DHT</h2>
+        <h3 align="center" > 최신값: {{test1}} </h3>
+
+         <table border=2 width="600" align="center">
+          <thead>
+          <td align="center">습도</td>
+          <td align="center">온도</td>
+          
+  
+          </thead>
+        {% for row in rows %}
+          <tr>
+            <td align="center">{{ row[0] }}</td>
+            <td align="center">{{ row[1] }}</td>
+            
+          
+            
+        
+          
+        
+          </tr>
+        {% endfor %}
+        </table>

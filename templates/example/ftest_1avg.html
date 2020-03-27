@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <h1>스마트 화분 만들기</h1>
+    
+    
+  </head>
+  <body>
+        <h3 align="center">센서1 평균값</h3>
+         <table border=2 width="600" align="center">
+          <thead>
+          <td align="center">기계</td>
+          <td align="center">작동</td>
+         
+          </thead>
+        {% for row in rows %}  #테이블을 가져올때의 코딩
+          <tr>
+            <td align="center">{{ row[0] }}</td>
+            <td align="center">{{ row[1] }}</td>
+            
+        
+          
+        
+          </tr>
+        {% endfor %}
+        </table>
+     
+      
+      
+  </body>
+</html>
